@@ -28,7 +28,8 @@ install()
 	clean_old_install
 
 	mkdir -p "$PREFIX"
-	make -j$NJOBS install
+	# make install cannot run in parallel through at least xpa-2.1.15
+	make install
 	test -z "$LIBNAME" -o -f "$PREFIX/lib/$LIBNAME"
 
 	install_ups
