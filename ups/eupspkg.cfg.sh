@@ -30,7 +30,7 @@ install()
 	mkdir -p "$PREFIX"
 	# make install cannot run in parallel through at least xpa-2.1.15
 	make install
-	test -z "$LIBNAME" -o -f "$PREFIX/lib/$LIBNAME"
+	test -z "$LIBNAME" -o -f "$PREFIX/$RLIBDIR/$LIBNAME"
 
 	install_ups
 }
