@@ -1,6 +1,6 @@
 # EupsPkg config file. Sourced by 'eupspkg'
 
-CONFIGURE_OPTIONS="--prefix=$PREFIX --enable-shared=yes"
+CONFIGURE_OPTIONS+=" --enable-shared=yes"
 
 case $(uname) in
 	Darwin) LIBNAME="libxpa.1.0.dylib" ;;
